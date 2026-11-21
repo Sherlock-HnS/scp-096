@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/gentoi/scp/scp096/scp096_reduxV2_scp096_bodyMAT_AlbedoTranspEDIT"
+    "$bumpmap" "models/gentoi/scp/scp096/scp096_bodyMAT_Normal_OpenGL_(1)"
+}

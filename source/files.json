@@ -1,0 +1,206 @@
+[
+  {
+    "path": "lua/autorun/gent_scp096_noodle.lua",
+    "size": 50377,
+    "crc": 689293365,
+    "sha256": "9dea4b93d6180117ca6d17b63bfc043706868bd7fb54c3878a3fa67571383b4c"
+  },
+  {
+    "path": "lua/autorun/include/gent_scp096_noodle.lua",
+    "size": 60124,
+    "crc": 4015915789,
+    "sha256": "9361b20c5e7ca417211e350cce49cd0c79e17ce33a0f1edf9d0626a14e7a06f9"
+  },
+  {
+    "path": "materials/gentoi/scp096/angryshyguy.png",
+    "size": 11862,
+    "crc": 2387951679,
+    "sha256": "be94296779e0a33ca7575a3c4aa2c6c4673c7c1ffba3b5a594bc4ebd32456487"
+  },
+  {
+    "path": "materials/gentoi/scp096/increaseshyguy.png",
+    "size": 12612,
+    "crc": 3816672574,
+    "sha256": "4569864f67ab60b035f0cb2d6169d2dbaad37e79fe3b444d61e658248e318baa"
+  },
+  {
+    "path": "materials/gentoi/scp096/shyguysad.png",
+    "size": 43926,
+    "crc": 2048324931,
+    "sha256": "010b04f8dd3192e994df1a6bc7fd5df78f03dc171254f8dd0b90faa498ae2e23"
+  },
+  {
+    "path": "materials/gentoi/scp096/shyguymiddle.png",
+    "size": 51127,
+    "crc": 2754271901,
+    "sha256": "d68c60b17ec0f5db38d89881276ab9ab25cf90e3e232ea85a6cb2b53a0ea2cef"
+  },
+  {
+    "path": "materials/gentoi/scp096/shyguyangry1.png",
+    "size": 38731,
+    "crc": 1362855569,
+    "sha256": "4a08a921d540ff9e5e2802c4062c51507cfda8b5d9ea5bc18decf13fa3fca669"
+  },
+  {
+    "path": "materials/gentoi/scp096/shyguy_bar.png",
+    "size": 23205,
+    "crc": 848628120,
+    "sha256": "30c46b74a55aa337922eb20a5900dc9f17cac56713179f824143e49431e0dcde"
+  },
+  {
+    "path": "materials/models/gentoi/scp/scp096/scp096_bodymat.vmt",
+    "size": 194,
+    "crc": 3091825639,
+    "sha256": "8f2c64780c547587de503e8b8451fe8cd81c92aa3710154b311f0e1ca02e5219"
+  },
+  {
+    "path": "materials/models/gentoi/scp/scp096/black.vmt",
+    "size": 145,
+    "crc": 2701828842,
+    "sha256": "ebb0c19d817a76d4e7489d7c471e292bf5a2fbaba689a38229fa4eea29916873"
+  },
+  {
+    "path": "materials/gentoi/scp096/shyguyicon1.png",
+    "size": 701474,
+    "crc": 257200980,
+    "sha256": "329362d9db139de23155b0fdf287b9238c4e9570bfe5e1ed1752b659b02654e5"
+  },
+  {
+    "path": "materials/gentoi/scp096/docile.png",
+    "size": 627983,
+    "crc": 2119915443,
+    "sha256": "3023f1ba510bd52ecf2e4fd1c8990752ee9b3dc5396c4c97de517c461d843a6d"
+  },
+  {
+    "path": "materials/models/gentoi/scp/scp096/scp096_tonguemat.vmt",
+    "size": 120,
+    "crc": 1358345576,
+    "sha256": "a129289e117bdec8c2413d2cbb0f080c2277c50e595cdece5495ad4c7b98e754"
+  },
+  {
+    "path": "materials/gentoi/scp096/rage1.png",
+    "size": 688711,
+    "crc": 3649077006,
+    "sha256": "82b50b54287675370d9da469d97a2fd283140139ba8802e6a7da2ddc9872fd50"
+  },
+  {
+    "path": "materials/models/gentoi/scp/scp096/scp096_reduxv2_scp096_tonguemat_albedotranedot.vtf",
+    "size": 349776,
+    "crc": 324702183,
+    "sha256": "a171b7ced09968d14f2889ae53e90c96cb5b78d68c3f640a0fd17cba6b35a982"
+  },
+  {
+    "path": "materials/gentoi/scp096/redborder.png",
+    "size": 1149764,
+    "crc": 2456969235,
+    "sha256": "fa405c6c9e05485a72afef820ed07d4066d980558445f7aba826daa9462ccba1"
+  },
+  {
+    "path": "models/gentoi/scp/scp096/killanim.vvd",
+    "size": 320,
+    "crc": 127528836,
+    "sha256": "9b978d358280b5891ff1b0ab653afd402216e21f012144a3993944b19d1aff41"
+  },
+  {
+    "path": "models/gentoi/scp/scp096/killanim.mdl",
+    "size": 33652,
+    "crc": 4259979352,
+    "sha256": "cfbb9a474a9374fd818dcedff66e41b8744532d1383a3fec34492fe990acfc3c"
+  },
+  {
+    "path": "materials/models/gentoi/scp/scp096/scp096_bodymat_normal_opengl_(1).vtf",
+    "size": 2796440,
+    "crc": 1515582773,
+    "sha256": "35097128e89efc0aa6ba67e1499a5a04cd0e8005902ea025021fca8ac04ec5bb"
+  },
+  {
+    "path": "models/gentoi/scp/scp096.phy",
+    "size": 51999,
+    "crc": 2237486597,
+    "sha256": "339c474f053effe22bf453c067e43aa33d9b84e675d2ef48d79254d2d65f82a5"
+  },
+  {
+    "path": "models/gentoi/scp/scp096.vvd",
+    "size": 748608,
+    "crc": 1553069106,
+    "sha256": "dd6135d3bc8d5916cbe1c71bcb7ea06518769985aaca48795f2698e840705024"
+  },
+  {
+    "path": "sound/gentoi/scp096/dooropen.wav",
+    "size": 674340,
+    "crc": 303172324,
+    "sha256": "923553ea0e08e5ab232a80b12ad9bc4a034aa4a1a79b2895934a12cc17e07070"
+  },
+  {
+    "path": "sound/gentoi/scp096/096 kill.wav",
+    "size": 1208068,
+    "crc": 3309500787,
+    "sha256": "4edfce2c3232acd4d4186a560758728ed261126b157a97908ed88fdbfb003763"
+  },
+  {
+    "path": "materials/models/gentoi/scp/scp096/scp096_reduxv2_scp096_bodymat_albedotranspedit.vtf",
+    "size": 5592656,
+    "crc": 3432599399,
+    "sha256": "17e112bab4f1379f0a92a4eefe80e848251a6ee90b7d6b9b36e3da9b340d3f99"
+  },
+  {
+    "path": "models/gentoi/scp/scp096.mdl",
+    "size": 1584444,
+    "crc": 3276905170,
+    "sha256": "a760d8536a6d451c5863af4d43a06303f2d5d840e38583407c35a5e9ab639692"
+  },
+  {
+    "path": "sound/gentoi/scp096/calmdown.wav",
+    "size": 1009798,
+    "crc": 410399861,
+    "sha256": "d3d233ab679f324533a8f486c8d7ffade9a109362d85c99aed465822abdec465"
+  },
+  {
+    "path": "models/gentoi/scp/scp096/killanim.dx90.vtx",
+    "size": 205,
+    "crc": 1891035151,
+    "sha256": "003be2646aed5d5eac251bfec8ec62eeb6a4a763135d645289d2dcd82ca4ee51"
+  },
+  {
+    "path": "models/gentoi/scp/scp096.dx90.vtx",
+    "size": 233043,
+    "crc": 879127218,
+    "sha256": "9b3dd3f387c719fe19a5ee46fc52d703b3c659bbd37ad8b62198b797918ddb96"
+  },
+  {
+    "path": "sound/gentoi/scp096/seen.wav",
+    "size": 1169902,
+    "crc": 50422591,
+    "sha256": "5834751bde072fea29e1e23c74d179d1083389f5abf90e08207fb1382029abad"
+  },
+  {
+    "path": "sound/gentoi/scp096/scream.wav",
+    "size": 3575960,
+    "crc": 856692918,
+    "sha256": "e20b2b566e828e741cdf3c0859a9d5a3aa12342069a244ae98f06da1fb437020"
+  },
+  {
+    "path": "sound/gentoi/scp096/whenseen.wav",
+    "size": 1802318,
+    "crc": 3119958193,
+    "sha256": "97419341e14e4d0aee267f783972d095fc7341caac430ee28a1a65f8ddce2613"
+  },
+  {
+    "path": "sound/gentoi/scp096/ambiance.wav",
+    "size": 5906584,
+    "crc": 626864975,
+    "sha256": "ac974ebb0764a8d20ed8ec7a2c4b873990bcee08f86a0b94ca931555a945961c"
+  },
+  {
+    "path": "materials/pills/pill_gent_scp096.png",
+    "size": 3709135,
+    "crc": 76654775,
+    "sha256": "541453b9d319a0d24968cced3d1a8adda8b24e98f9721b877ec887fd2d1b8aa4"
+  },
+  {
+    "path": "sound/gentoi/scp096/triggered.wav",
+    "size": 6451278,
+    "crc": 240666398,
+    "sha256": "55d86aaef624ad99ba7e9ee3ac6646434d7a69d79baacccb05a3a2ec82dfdd24"
+  }
+]
