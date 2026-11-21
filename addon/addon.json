@@ -1,12 +1,9 @@
 {
-  "ignore": [
-    "ogg"
-  ],
+  "title": "[PILL PACK] Scp 096 / Shy guy",
+  "type": "npc",
   "tags": [
     "realism",
-    "roleplay",
-    "fun"
+    "roleplay"
   ],
-  "title": "[PILL PACK] Scp 096 / Shy guy",
-  "type": "npc"
+  "ignore": []
 }
