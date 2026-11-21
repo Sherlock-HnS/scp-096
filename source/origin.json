@@ -4,8 +4,8 @@
   "title": "[PILL PACK] SCP 096",
   "author": "Nick Vogel",
   "status": "extracted_verified",
-  "acquisition": "existing_steam_client_installation",
-  "steamcmd_download_completed": false,
+  "acquisition": "steamcmd",
+  "steamcmd_download_completed": true,
   "source_workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3742941373",
   "source_archive_sha256": "0e7e641f75cae623fca0cc45c23737190a37726c67abe7d7eee27fef5ad9f58e",
   "gma_header": {
