@@ -1,4 +1,4 @@
-[PILL PACK] SCP 096
+# [PILL PACK] SCP 096
 
 ![Workshop preview](workshop-preview.jpg)
 
