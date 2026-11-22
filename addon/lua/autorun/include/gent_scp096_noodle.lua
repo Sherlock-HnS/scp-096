@@ -299,6 +299,13 @@ local function racheljackietien_jumpscare(ply, ent, duration, customanimstuff)
             end
         end
 
+        if SherlockHNS and IsValid(jumpscare_entity) and jumpscare_entity:IsPlayer() then
+            return pk_pills.playHNSJumpscare(ply, ent, jumpscare_entity, duration, {
+                camera = "gentoi_scp096_cam",
+                onStart = customanimstuff,
+            })
+        end
+
         if jumpscare_entity ~= nil then
             
             ent.JuumpscareStart = CurTime()
@@ -844,10 +851,7 @@ pk_pills.register('pill_gent_scp096', {
         --speed.run = 900
 
         if IsValid(ply) and IsValid(ent) then
-            ply:SetWalkSpeed(speed.walk)
-            ply:SetRunSpeed(speed.run)
-            ply:SetCrouchedWalkSpeed(speed.ducked)
-            ply:SetJumpPower(speed.jumppower)
+            pk_pills.setCostumeMoveSpeed(ent, speed.walk, speed.run, speed.ducked, speed.jumppower)
         end
 
         -- jumpscare handeling
@@ -1076,6 +1080,7 @@ pk_pills.register('pill_gent_scp096', {
                 if ent:GetNWBool("Gentoi_scp96_rage3_toggle") then
                     local cd = ent.formTable.Gentoi_scp096_stats.rage.cd
                     ent:SetNWFloat("Bar_scp096_rage_cd", CurTime()+ cd)
+                    pk_pills.setHNSCooldown(ent, "rage", ent:GetNWFloat("Bar_scp096_rage_cd") - CurTime())
                     ent:SetNWFloat("Bar_scp096_rage_ui", CurTime()+ cd)
                     ent:SetNWFloat("Bar_scp096_rage_max", cd)
                     ent:SetNWBool("increaseShyGuy", false)
@@ -1240,11 +1245,11 @@ pk_pills.register('pill_gent_scp096', {
                 if ent:GetNWFloat("Gentoi_scp96_ragedur") > CurTime() then
                     local anim = ent:GetPuppet():LookupSequence("Kill")
                     local dur = ent:GetPuppet():SequenceDuration(anim)
-                    racheljackietien_jumpscare(
+                    return racheljackietien_jumpscare(
                         ply,
                         ent,
                         dur,
-                        function()
+                        function(victim)
 
                             AdvancedPillSound(
                                 {
@@ -1257,7 +1262,7 @@ pk_pills.register('pill_gent_scp096', {
                             )
 
                             ent:PillAnim('kill')
-                            local entity = ent.jumpscare_entity
+                            local entity = victim or ent.jumpscare_entity
                             if entity:LookupBone("ValveBiped.Bip01_Pelvis") then
                                 local JumpscareAnimEntity = ents.Create('prop_dynamic')
                                 JumpscareAnimEntity:SetModel('models/Gentoi/scp/scp096/killanim.mdl')
@@ -1282,6 +1287,7 @@ pk_pills.register('pill_gent_scp096', {
                                 JumpscareFakeEntity:SetNWEntity("JumpscareDeathThing_ent_scp096", entity)
 
                                 local oldcolor = entity:GetColor()
+                        local wasHidden = entity:GetNoDraw()
                                 local oldRender = entity:GetRenderMode()
                                 entity:SetRenderMode(RENDERMODE_TRANSCOLOR)
                                 entity:SetColor(Color(255, 255, 255, 0))
@@ -1306,7 +1312,8 @@ pk_pills.register('pill_gent_scp096', {
                                 timer.Simple(dur,function()
                                     if !IsValid(ent) then return end
                                     ent:RemoveCallOnRemove("jumpscareend_afkeacfharcter_"..ent:EntIndex())
-                                    JumpscareAnimEntity:SetParent(NULL)
+                                    if not IsValid(JumpscareAnimEntity) then return end
+                            JumpscareAnimEntity:SetParent(NULL)
                                     ent:SetNWEntity("JumpscareDeathThing_ent", NULL)
 
                                     if IsValid(JumpscareAnimEntity) and IsValid(JumpscareFakeEntity) then
@@ -1325,6 +1332,15 @@ pk_pills.register('pill_gent_scp096', {
                                         JumpscareFakeEntity:Remove()
                                     end
                                 end)
+                        if victim then
+                            return function()
+                                if IsValid(victim) then
+                                    victim:SetNoDraw(wasHidden)
+                                    victim:SetRenderMode(oldRender)
+                                    victim:SetColor(oldcolor)
+                                end
+                            end
+                        end
                             end
                         end
                     )
@@ -1342,4 +1358,15 @@ pk_pills.register('pill_gent_scp096', {
     reload=function(ply,ent) end,
     flashlight = function(ply, ent) end,
     jump = function(ply, ent) end
-})
+}, function(form)
+    -- The legacy damage branches are for Sandbox and NPCs.
+    form.hnsKillAPI = true
+    form.hnsAbilities = {
+        { id = "attack", name = "Ataque", key = IN_ATTACK, OnUse = form.attack.func },
+    }
+    form.attack, form.attack2, form.reload = nil, nil, nil
+    pk_pills.bindHNSButtons(form, "noodles_gent_scp096_keybinds_activate", {
+        { id = "rage", name = "Fúria", button = KEY_1, keyLabel = "1" },
+        { id = "shiftlock", name = "Travar corrida", button = KEY_R, keyLabel = "R" },
+    })
+end)

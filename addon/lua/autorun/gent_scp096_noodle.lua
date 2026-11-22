@@ -73,6 +73,7 @@ else
     local rageColor = Color(255, 255, 255, 255)
 
     hook.Add("HUDPaint", "gent_scp096_hudpaint", function()
+        if SherlockHNS then return end
         local ply = LocalPlayer()
         if not IsValid(ply) then return end
 
@@ -602,19 +603,7 @@ hook.Add("OnEntityCreated", "scp096_gent_noodles_initialize", function(ent)
                             ply:SetViewOffset(camOffset)
                             ply:SetViewOffsetDucked(camOffset - Vector(0, 0, duckBy*1.75) )
                             
-                            local speed = self.formTable.Gentoi_scp096_stats.moveSpeed or {}
-                            ply:SetWalkSpeed(speed.walk or 200)
-                            ply:SetRunSpeed(speed.run or speed.walk or 500)
-
-                            if speed.ducked then
-                                ply:SetCrouchedWalkSpeed(speed.ducked / (speed.walk or 200))
-                            elseif duckBy == 0 then
-                                ply:SetCrouchedWalkSpeed(1)
-                            else
-                                ply:SetCrouchedWalkSpeed(.3)
-                            end
-
-                            ply:SetJumpPower(speed.jumppower or 200)
+                            self:ApplyMoveSpeed()
                             
                         end
                         pk_pills.mapEnt(ply, self)
@@ -642,13 +631,10 @@ hook.Add("OnEntityCreated", "scp096_gent_noodles_initialize", function(ent)
                             end
 
                             if self.animFreeze and not self.plyFrozen then
-                                ply:SetWalkSpeed(ply:GetWalkSpeed() / 2)
-                                ply:SetRunSpeed(ply:GetWalkSpeed() / 2)
+                                self:ApplyMoveSpeed()
                                 self.plyFrozen = true
                             elseif not self.animFreeze and self.plyFrozen then
-                                local speed = self.formTable.Gentoi_scp096_stats.moveSpeed or {}
-                                ply:SetWalkSpeed(speed.walk or 200)
-                                ply:SetRunSpeed(speed.run or speed.walk or 500)
+                                self:ApplyMoveSpeed()
                                 self.plyFrozen = nil
                             end
 
